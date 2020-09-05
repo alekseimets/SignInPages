@@ -1,15 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
-import {Navbar} from "./components/layout/Navbar.js";
+import { Navbar } from "./components/layout/Navbar.js";
 
-function App() {
-  return;
-  <BrowserRouter>
-    <div className="App">
-      <Navbar />
-    </div>
-    ;
-  </BrowserRouter>;
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
