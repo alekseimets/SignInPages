@@ -4,7 +4,9 @@ import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  project: projectReducer,
+  project: projectReducer
+  firebase: firebaseReducer,
+  firestore: firestoreReducer
 });
 
-export default rootReducer;
+export default rootReducer

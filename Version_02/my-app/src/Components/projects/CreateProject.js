@@ -5,20 +5,20 @@ import { createProject } from '../../store/action/projectActions';
 class CreateProject extends Component {
   state = {
     title: "",
-    content: "",
-  };
+    content: ""
+  }
 
   handleChange = (e) => {
     this.setState({
-      [e.target.id]: e.target.value,
+      [e.target.id]: e.target.value
     });
-  };
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
     //console.log(this.state);
     this.props.createProject(this.state)
-  };
+  }
 
   render() {
     return (
