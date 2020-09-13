@@ -41,10 +41,16 @@ class SignIn extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return{
+        authError: state.auth.authError
+    }
+}
+
 const mapDisaptchToProps = (dispatch) => {
     return{
         signIn: (creds) => dispatch(signIn(creds))
     }
 }
 
-export default connect(null, mapDispatchToProps)(SignIn)
+export default connect(mapStateToProps, mapDisaptchToProps)(SignIn)
