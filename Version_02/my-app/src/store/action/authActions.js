@@ -1,5 +1,3 @@
-import { FirebaseReducer } from "react-redux-firebase";
-
 export const signIn = (credentials) => {
   return (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
@@ -29,7 +27,7 @@ export const signOut = () => {
   };
 };
 
-export const SignUp = (newUser) => {
+export const signUp = (newUser) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();
     const firestore = getFirestore();
