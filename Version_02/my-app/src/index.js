@@ -13,19 +13,11 @@ import {
   reduxFirestore,
   getFirestore,
 } from "redux-firestore";
-import {
-  ReactReduxFirebaseProvider,
-  getFirebase,
-} from "react-redux-firebase";
+import { ReactReduxFirebaseProvider, getFirebase } from "react-redux-firebase";
 import { useSelector } from "react-redux";
 import { isLoaded } from "react-redux-firebase";
 
 import "firebase/firestore";
-
-const rrfConfig = {
-  userProfile: "projects",
-  useFirestoreForProfile: true,
-};
 
 const store = createStore(
   rootReducer,
@@ -36,10 +28,15 @@ const store = createStore(
 );
 
 function AuthIsLoaded({ children }) {
-    const auth = useSelector(state => state.firebase.auth)
-    if (!isLoaded(auth)) return <div>splash screen...</div>;
-    return children
-  }
+  const auth = useSelector((state) => state.firebase.auth);
+  if (!isLoaded(auth)) return <div>splash screen...</div>;
+  return children;
+}
+
+const rrfConfig = {
+  userProfile: "users",
+  useFirestoreForProfile: true,
+};
 
 const rffProps = {
   firebase,
