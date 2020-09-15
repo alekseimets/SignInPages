@@ -5,5 +5,5 @@ const functions = require("firebase-functions");
 //
 exports.helloWorld = functions.https.onRequest((request, response) => {
   functions.logger.info("Hello logs!", { structuredData: true });
-  esponse.send("Hello, ninja!");
+  response.send("Hello, ninja!");
 });
