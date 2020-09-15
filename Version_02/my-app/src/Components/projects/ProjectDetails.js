@@ -41,7 +41,7 @@ const mapStateToProps = (state, ownProps) => {
   const project = projects ? projects[id] : null;
   return {
     project: project,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
   };
 };
 
